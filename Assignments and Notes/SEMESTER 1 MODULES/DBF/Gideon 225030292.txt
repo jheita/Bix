@@ -1,0 +1,78 @@
+﻿LAB 8 
+
+1.Query to display all staff, sorted by LastName
+
+SELECT * FROM Staff
+ORDER BY LastName;
+
+  StaffID	FirstName	LastName	Department	Salary		HireDate
+------------  -----------------  ---------------  ------------  --------------   ----------------------------
+ 3003		Noah		Brown		Finance          28000		2019-09-10 00:00:00.000
+ 3005		Ethan		Davis		Marketing        24000		2022-08-05 00:00:00.000
+ 3004		Maya		Jones		Logistics        22000		2021-12-12 00:00:00.000
+ 3001		Lucas		Miller		Marketing        25000		2018-07-01 00:00:00.000
+ 3002		Amara		Williams	IT               35000		2020-03-15 00:00:00.000
+ 
+
+2.Display all staff from IT and Logistics Departments only
+
+SELECT * FROM Staff
+WHERE Department IN ('IT', 'Logistics');
+
+  StaffID     FirstName                      LastName                       Department                Salary       HireDate
+ ----------- --------------------------  ------------------- ------------  ------------------------- --------------  -----------------------
+ 3002        Amara                          Williams                       IT                        35000       2020-03-15 00:00:00.000
+ 3004        Maya                           Jones                          Logistics                 22000       2021-12-12 00:00:00.000
+
+
+3. Find staff whose FirstName starts with ‘A’ and belong to IT Department.
+
+SELECT * FROM Staff
+WHERE FirstName LIKE 'A%' AND Department = 'IT';
+
+  StaffID      FirstName       LastName                  Salary         HireDate
+ -----------  --------------   --------------------------------------- -----------------------
+ 3002 	       Amara	       Williams	IT               35000	        2020-03-15 00:00:00.000
+
+
+4. Display StaffID and FirstName for salaries ranging between 22000 and 30000
+
+SELECT StaffID, FirstName FROM Staff
+WHERE Salary BETWEEN 22000 AND 30000;
+
+  StaffID     FirstName
+------------  -----------
+ 3001	      Lucas
+ 3003	      Noah
+ 3004	      Maya
+ 3005	      Ethan
+
+
+5. Change 'Lucas' FirstName to 'Lucas-Jay'. 
+
+UPDATE Staff
+SET FirstName = 'Lucas-Jay'
+WHERE FirstName = 'Lucas';
+
+StaffID   FirstName
+--------  --------
+ 3001     Lucas-Jay
+
+
+6. Remove the record with StaffID 3005. 
+
+DELETE FROM Staff
+WHERE StaffID = 3005;
+
+StaffID 	FirstName	LastName	Department	Salary	  HireDate
+-------------  -------------  --------------  ----------------  ---------  ------------------
+ 3001	   	Lucas-Jay	Miller		Marketing	25000	  2018-07-01 00:00:00
+ 3002	    	Amara		Williams	IT		35000	  2020-03-15 00:00:00
+ 3003		Noah		Brown		Finance		28000	  2019-09-10 00:00:00
+ 3004		Maya		Jones		Logistics	22000	  2021-12-12 00:00:00
+
+
+
+
+
+

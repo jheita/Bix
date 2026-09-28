@@ -1,0 +1,22 @@
+225062453
+Joseph Heita
+
+LAB ACTIVITY 1
+PART 1
+
+1.Tables
+Forms
+Reports
+Queries
+Macros
+Modules
+
+Tables-Are database objects that contain all the data in the database.they are also called relation,they contain rows and columns.
+Forms-Its a database object that allows data entry and allow users to input data into the system.
+Reports-Are database objects that allows data to be represented in the database for analysizing,summarizing and displaying data in a well-ongranised format for the user. 
+Queries-Its a database object that enables the user to request for the retrieval or manipulation of data within the database.
+Macros-Its a database platform that allows the user to automate tasks and add meaning directly to or into the tables.
+
+2.  3 -Shipping company 1																							
+      -Shipping company 2
+      -Shipping company 3
